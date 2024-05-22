@@ -1,0 +1,12 @@
+<?php
+$address=$_POST['saddress'];
+$class=$_POST["class"];
+$ph=$_POST["sphone"];
+$name2 = $_POST["sname"];
+
+$conn = mysqli_connect("localhost","root","","crud");
+$query = "INSERT into student (sname,saddress,sclass,sphone) values('$name2','$address','$class','$ph');";
+$result=mysqli_query($conn,$query);
+
+header("Location: http://localhost/CRUD/crud_html/");
+?>
